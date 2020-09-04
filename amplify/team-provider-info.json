@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-playlistconverter-dev-210224-authRole",
+      "UnauthRoleArn": "arn:aws:iam::804395223810:role/amplify-playlistconverter-dev-210224-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::804395223810:role/amplify-playlistconverter-dev-210224-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-playlistconverter-dev-210224-deployment",
+      "UnauthRoleName": "amplify-playlistconverter-dev-210224-unauthRole",
+      "StackName": "amplify-playlistconverter-dev-210224",
+      "StackId": "arn:aws:cloudformation:eu-west-2:804395223810:stack/amplify-playlistconverter-dev-210224/8e6adc60-eee9-11ea-a7dc-0ac6423403f2",
+      "AmplifyAppId": "d3bofsoomm6xkp"
+    }
+  }
+}
