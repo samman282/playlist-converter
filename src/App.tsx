@@ -45,14 +45,9 @@ const getPlaylistData = async (id: string | undefined) => {
       resJSON.items[0].snippet.channelTitle +
       " - " +
       resJSON.items[0].snippet.localized.title;
-  } catch (err) {
-    navToError(err);
-    return;
-  }
-  let songTitles: string[] = [];
-  let notAll: any = 1;
-  while (notAll === 1 || notAll) {
-    try {
+    let songTitles: string[] = [];
+    let notAll: any = 1;
+    while (notAll === 1 || notAll) {
       const res = await fetch(googleURI(id, notAll !== 1 ? notAll : false));
       const resJSON = await res.json();
       notAll = resJSON.nextPageToken;
@@ -60,16 +55,20 @@ const getPlaylistData = async (id: string | undefined) => {
         if (songTitles.length >= 100) return;
         songTitles.push(item.snippet.title);
       });
-      if (songTitles.length >= 100) return;
-    } catch (err) {
-      navToError(err);
-      return;
+      if (songTitles.length >= 100)
+        return {
+          title: playlistTitle,
+          songs: songTitles,
+        };
     }
+    return {
+      title: playlistTitle,
+      songs: songTitles,
+    };
+  } catch (err) {
+    navToError(err);
+    return;
   }
-  return {
-    title: playlistTitle,
-    songs: songTitles,
-  };
 };
 
 const getSpotifyId = async (access_token: string | null) => {
