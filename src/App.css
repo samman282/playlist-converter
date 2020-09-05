@@ -1,0 +1,24 @@
+.form-content {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  max-width: 100%;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.form-content > * {
+  margin-bottom: 20px !important;
+}
+
+.spinner-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
