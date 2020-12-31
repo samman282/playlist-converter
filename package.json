@@ -30,6 +30,12 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "NEW_FEATURE"
+  {
+  "volume"
+  if>5db
+  then print "Control volume:
+}
   "browserslist": {
     "production": [
       ">0.2%",
